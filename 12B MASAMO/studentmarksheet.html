@@ -1,0 +1,293 @@
+<html>
+<head>
+<title> student management system</title>
+<div ID="HEADER"> 
+<nav>
+   
+   <a href="HOME.html"><button class="bt">HOME</button></a>
+   <a href="GALLERY.html"><button class="bt">GALLERY</button><a>
+   <a href="iframe.html"><button class="bt">ABOUT</button></a>
+   <a href="GRADE12.html"><button class="bt">R.CARD</button></a>
+   <a href="login.html"><button class="bt">REGISTER</button></a>
+   <a href="studentmarksheet.html"><button class="bt">M.SHEET</button></a>
+   </ul>
+</nav>
+
+
+</div>   
+<marquee><font face="arial" size="20" color="blue">  Well Come To Higa Model Boarding School(HMBS) !!! </font> <br>  <u> </h1></Marquee>
+</head>
+<img src="G2.png" width="100" height="80" align="LEFT"/><img src="HP2.png" width="100" height="80" align="right"/>
+<style type="text/css">
+.intro{
+    color: orange;
+    font-size: 70px;
+}
+#btm{
+background: green;
+color: yellow;
+width: 100%;
+height: 200px;
+margin-left: 0px;
+align: center;
+}
+.btft{
+align: center;
+}
+#btn{
+    width: 300px;
+    height: 100px;
+    color: black;
+    background-color: orange;
+    font-size: 25px;
+
+}
+#HEADER,nav{
+    color: white;
+    background-color: black;
+    display: inline;
+
+
+}
+
+   .bt{
+    width: 155px;
+    height: 100px;
+    color: yellow;
+    background-color: green;
+    border-style: none;
+    font-size: 30px;
+
+
+}
+
+
+body
+{
+ border-radius: 5px;
+ border-style: double;
+ border-color: red;
+ position: absolute;
+ width: 100%;
+ height: 1500px;
+ top: 40px;
+ left: 80px;
+ padding: 40px 40px 40px 30px;
+ background-color: cyan;
+}
+#tbl,#tbl2
+{
+border-collapse:collapse;
+font-size:18;
+font-family:Century Gothic;
+}
+.demo
+{
+position: static;
+left:35px;
+top:480px;
+font-size:17;
+font-family:Arial;
+font-weight:bold;
+margin-top:100px;
+border-collapse:collapse;
+}
+#demoname
+{
+font-size:15px
+}
+.btn
+{
+position:absolute;
+top:355px;
+left:720px;
+}
+</STYLE>
+<SCRIPT>
+function myFun()
+{
+var a=document.form1.txtsid.value;
+document.getElementById("demosid").innerHTML=a;
+var b=document.form1.txtfname.value;
+document.getElementById("demofname").innerHTML=b;
+var c=document.form1.txtsch.value;
+document.getElementById("demosch").innerHTML=c;
+var d=document.form1.txtbatch.value;
+document.getElementById("demobatch").innerHTML=d;
+var e=document.form1.txtmat.value;
+document.getElementById("demomat").innerHTML=e;
+var f=document.form1.txteng.value;
+document.getElementById("demoeng").innerHTML=f;
+var g=document.form1.txtit.value;
+document.getElementById("demoit").innerHTML=g;
+var h=document.form1.txtphy.value;
+document.getElementById("demophy").innerHTML=h;
+var i=document.form1.txtchem.value;
+document.getElementById("demochem").innerHTML=i;
+var j=document.form1.txtbio.value;
+document.getElementById("demobio").innerHTML=j;
+var k=document.form1.txtciv.value;
+document.getElementById("demociv").innerHTML=k;
+var l=document.form1.txtkem.value;
+document.getElementById("demokem").innerHTML=l;
+var m=document.form1.txthpe.value;
+document.getElementById("demohpe").innerHTML=m;
+var n=document.form1.txttd.value;
+document.getElementById("demotd").innerHTML=n;
+var txt1=eval(parseFloat(document.form1.txtmat.value)+parseFloat(document.form1.txteng.value)+parseFloat(document.form1.txtit.value)+parseFloat(document.form1.txtphy.value)+parseFloat(document.form1.txtchem.value)+parseFloat(document.form1.txtbio.value)+parseFloat(document.form1.txtciv.value)+parseFloat(document.form1.txtkem.value)+parseFloat(document.form1.txthpe.value)+parseFloat(document.form1.txttd.value));
+document.getElementById("demototal").innerHTML=txt1;
+var txt2=eval(parseFloat(txt1*100)/1000);
+document.getElementById("demoper").innerHTML=txt2.toFixed(2)+"%";
+switch(true)
+{
+case(txt2>=80):
+document.getElementById("demograde").innerHTML="A+";
+break;
+case(txt2>=70):
+document.getElementById("demograde").innerHTML="A";
+break;
+case(txt2>=60):
+document.getElementById("demograde").innerHTML="B";
+break;
+case(txt2>=50):
+document.getElementById("demograde").innerHTML="C";
+break;
+case(txt2>=40):
+document.getElementById("demograde").innerHTML="D";
+break;
+case(txt2<40):
+document.getElementById("demograde").innerHTML="Fail";
+break;
+}
+}
+</SCRIPT>
+   
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</HEAD>
+<BODY>
+
+
+
+<DIV class="color">
+<H1 align="center"style="font-family:cambria;font-size:20";><U>STUDENT MARKSHEET</h1>
+<FIELDSET>
+<LEGEND>STUDENT INFORMATION</LEGEND>
+<TABLE align="center" id="tbl">
+<FORM name="form1">
+</TR>
+<tr>
+<TD width="10">student id:</TD> <TD><INPUT type="text" name="txtsid"  maxlength="3" size="4"/></TD>
+<TD>Full Name:</TD><TD> <INPUT type="text" name="txtfname"maxlength="50" size="30"/></TD></tr>
+<TD> School Name:</TD><TD> <INPUT type="text" name="txtsch"maxlength="30" size="30"/></TD>
+<TD style="text-indent:5px">Batch:</TD><TD> <INPUT type="text" name="txtbatch" maxlength="3" size="30"/></TD></tr>
+</TABLE>
+</FIELDSET></BR>
+<FIELDSET>
+<LEGEND> SUBJECTS MARKS </LEGEND>
+<TABLE id="tbl2">
+<TR>
+<TD> Maths:</TD><TD> <INPUT type="text" name="txtmat" maxlength="3" size="10"/> Out of 100 </TD>
+</TR>
+<TR>
+<TD>English:</TD><TD>  <INPUT type="text" name="txteng" maxlength="3" size="10"/> Out of 100</TD>
+</TR>
+<TR>
+<TD> IT:</TD><TD> <INPUT type="text" name="txtit" maxlength="3" size="10"/> Out of 100</TD>
+</TR>
+<TR>
+<TD> Physics:</TD><TD> <INPUT type="text" name="txtphy" maxlength="3" size="10" /> Out of 100</TD>
+</TR>
+<TR>
+<TD> Chemistry:</TD><TD> <INPUT type="text" name="txtchem" maxlength="3" size="10" /> Out of 100</TD>
+</TR>
+<TR>
+<TD> Biology:</TD><TD> <INPUT type="text" name="txtbio" maxlength="3" size="10" /> Out of 100</TD>
+</TR>
+<TR>
+<TD> Civics:</TD><TD> <INPUT type="text" name="txtciv" maxlength="3" size="10" /> Out of 100</TD>
+</TR>
+<TR>
+<TD> Kembatigna:</TD><TD> <INPUT type="text" name="txtkem" maxlength="3" size="10" /> Out of 100</TD>
+</TR>
+<TR>
+<TD> HPE:</TD><TD> <INPUT type="text" name="txthpe" maxlength="3" size="10" /> Out of 100</TD>
+</TR>
+<TR>
+<TD>TD:</TD><TD> <INPUT type="text" name="txttd" maxlength="3" size="10" /> Out of 100</TD>
+</TR>
+</TR>
+</TABLE>
+</FIELDSET>
+<DIV class="btn">
+<button style="font-size:20" type="button" onclick='myFun()'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submit</button><BR>
+<button style="font-size:20" type="Reset">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reset</button>
+</DIV>
+<DIV class="demo">
+  <TABLE border="3">
+<TR>
+<TH colspan="8" width="440"> Student Information </TH>
+</TR>
+<TR>
+<TD width="135">student id:</TD><TD><FONT face="arial" id="demosid"></FONT></TD>
+</TR>
+<TR>
+<TD width="100">Full Name:</TD><TD><FONT face="arial" id="demofname"></FONT></TD>
+</TR>
+<TR>
+<TD width="135">School Name:</TD><TD><FONT face="arial" id="demosch"></FONT></TD>
+</TR>
+<TD width="135">Batch:</TD> <TD><FONT face="arial" id="demobatch"></FONT></TD>
+</TR>
+<TR>
+<TH colspan="8" width="240"> Subjects Marks </TH>
+</TR>
+<TR>
+<TD width="135">Maths:</TD> <TD><FONT face="arial" id="demomat"></FONT></TD>
+</TR>
+<TR>
+<TD width="135">English:</TD><TD><FONT face="arial" id="demoeng"></FONT></TD>
+</TR>
+<TD width="135">IT:</TD><TD><FONT face="arial" id="demoit"></FONT></TD>
+</TR>
+<TR>
+<TD width="135">Physics:</TD><TD><FONT face="arial" id="demophy"></FONT></TD>
+</TR>
+<TR>
+<TD width="135">Chemistry:</TD><TD><FONT face="arial" id="demochem"></FONT></TD>
+</TR>
+<TR>
+<TD width="135">Biology:</TD><TD><FONT face="arial" id="demobio"></FONT></TD>
+</TR>
+<TR>
+<TD width="135">Civics:</TD><TD><FONT face="arial" id="demociv"></FONT></TD>
+</TR>
+<TD width="135">Kembatigna:</TD><TD><FONT face="arial" id="demokem"></FONT></TD>
+</TR>
+<TR>
+<TD width="135">HPE:</TD><TD><FONT face="arial" id="demohpe"></FONT></TD>
+</TR>
+<TR>
+<TD width="135">TD:</TD><TD><FONT face="arial" id="demotd"></FONT></TD>
+</TR>
+<TR>
+<TH colspan="8" width="240"> Marks Result </TH>
+</TR>
+<TR>
+<TD width="135">TOTAL:</TD><TD> <FONT face="arial" id="demototal"></FONT></TT></TD>
+</TR>
+<TR>
+<TD width="135">Percentage:</TD><TD><FONT face="arial" id="demoper"></FONT></TD>
+</TR>
+<TR>
+<TD width="135">Grade:</TD><TD><FONT face="arial" id="demograde"></FONT></TD>
+</TR>
+ </table>
+</DIV>
+<footer>
+<div id="btm">
+<h3 class="btft">WE ARE A GROUP IN GRADE 12 SECTION B AND WE ARE ALWAYS HOPING TO LEARN AND PRACTICE NEW THINGS.</h3>
+<h1 class="btft">&copy; HACKERS | All Rights Reserved | 2022 G.C</h1>
+</div>
+</footer>
+</body>
+</html>
